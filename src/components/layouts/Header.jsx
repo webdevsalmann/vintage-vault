@@ -10,7 +10,7 @@ export default function Header() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   return (
-    <header className='w-full bg-background'>
+    <header className='absolute top-0 left-0 right-0 w-full'>
       <nav className="px-[5%] py-4 w-full grid grid-cols-2 justify-center items-center">
 
         <Link className="h-8 w-fit flex-center" href="/">
@@ -24,11 +24,11 @@ export default function Header() {
         </Link>
 
 
-        <div className="w-8 h-8 md:hidden justify-self-end"
+        {/* <div className="w-8 h-8 md:hidden justify-self-end"
           onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
           {isNavbarOpen ? <X /> : <AlignRight />}
-        </div>
-
+        </div> */}
+{/* 
         <ul className={`link-box relative py-4 flex-center items-start flex-col gap-4 justify-self-start  md:justify-self-end md:flex-row md:flex ${isNavbarOpen ? 'flex' : 'hidden'}`}>
           <Link className={`${buttonVariants({ variant: "ghost", size: 'sm' })} capitalize text-muted-foreground`} href="/#about">
             About
@@ -36,7 +36,7 @@ export default function Header() {
           <Link className={`${buttonVariants({ size: "sm" })} capitalize text-muted-foreground`} href="/">
             Receive Free Catalogue
           </Link>
-        </ul>
+        </ul> */}
       </nav>
     </header>
   )

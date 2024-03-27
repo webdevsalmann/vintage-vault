@@ -1,11 +1,13 @@
-import { Barlow_Condensed } from 'next/font/google'
+import { Barlow_Condensed, Crimson_Text, Kanit, Montserrat } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import Header from '@/components/layouts/Header';
 import Footer from '@/components/layouts/Footer';
 import { Toaster } from '@/components/ui/toaster';
 
-const rubik = Barlow_Condensed({ subsets: ['latin'], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], });
-// const rubik = Barlow_Condensed({ subsets: ['latin'] });
+const rubik = Crimson_Text({ subsets: ['latin'], weight: [ "400",  "600", "700", ], });
+// const myFont = localFont({ src: '../../public/fonts/ARBONNIE.ttf' })
+// const rubik = Crimson_Text({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Vintage Vault – Vintage Jewellery',

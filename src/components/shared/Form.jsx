@@ -7,6 +7,22 @@ import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
 import { AtSign, CircleUser, Loader2, Smartphone } from "lucide-react";
 import { Checkbox } from "../ui/checkbox";
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+import countryData from 'country-data';
+
+function getAllCountryCodes() {
+    const countryCodes = countryData?.callingCountries?.all?.map(country => ({
+        name: country.name,
+        code: country.countryCallingCodes[0]
+    }));
+    return countryCodes;
+}
 
 export default function Form() {
     // const { toast } = useToast()
@@ -49,39 +65,59 @@ export default function Form() {
     //     }
     // }
 
+    const countryCodes = getAllCountryCodes();
+    console.log(countryData)
+
     return (
-        <form className="p-4 w-full flex flex-col gap-6 bg-muted rounded-md border">
-            <div className="text-center">
-                <div className="text-4xl font-medium">Get Free Catelogue</div>
-                <p className="mt-2">Receive latest catelogue form vintage vault every month.</p>
-            </div>
+        <form className="p-4 w-full bg-grad-primary flex flex-col gap-4 bg-muted rounded-md border">
 
-            <div className="w-full grid gap-2 items-center">
-                <Label className="text-lg flex gap-2" htmlFor="firstName">
-                    <CircleUser className="size-4 self-center" /> First Name
-                </Label>
-                <Input className="w-full" type="text" name="firstName" id="firstName" required />
-            </div>
+            <div className="grid grid-cols-2 gap-4">
+                <div className="w-full grid gap-1 col-span-2 md:col-span-1">
+                    <Label className="text-lg flex gap-2" htmlFor="firstName">
+                        <CircleUser className="size-4 self-center" /> First Name
+                    </Label>
+                    <Input className="w-full" type="text" name="firstName" id="firstName" required />
+                </div>
 
-            <div className="w-full grid gap-2 items-center">
-                <Label className="text-lg flex gap-2" htmlFor="lastName">
-                    <CircleUser className="size-4 self-center" /> Last Name
-                </Label>
-                <Input className="w-full" type="text" name="lastName" id="lastName" required />
-            </div>
+                <div className="w-full grid gap-1 col-span-2 md:col-span-1">
+                    <Label className="text-lg flex gap-2" htmlFor="lastName">
+                        <CircleUser className="size-4 self-center" /> Last Name
+                    </Label>
+                    <Input className="w-full" type="text" name="lastName" id="lastName" required />
+                </div>
 
-            <div className="w-full grid gap-2 items-center">
-                <Label className="text-lg flex gap-2" htmlFor="email">
-                    <AtSign className="size-4 self-center" /> Email
-                </Label>
-                <Input className="w-full" type="email" name="email" id="email" required />
-            </div>
+                <div className="w-full grid gap-1 col-span-2">
+                    <Label className="text-lg flex gap-2" htmlFor="email">
+                        <AtSign className="size-4 self-center" /> Email
+                    </Label>
+                    <Input className="w-full" type="email" name="email" id="email" required />
+                </div>
 
-            <div className="w-full grid gap-2 items-center">
-                <Label className="text-lg flex gap-2" htmlFor="mobileNumber">
-                    <Smartphone className="size-4 self-center" /> Mobile No.
-                </Label>
-                <Input className="w-full" type="tel" name="mobileNumber" id="mobileNumber" required />
+                <div className="w-full grid gap-1 col-span-2">
+                    <Label className="text-lg flex gap-2" htmlFor="mobileNumber">
+                        <Smartphone className="size-4 self-center" /> Mobile No.
+                    </Label>
+                    <div className="flex gap-2">
+                        <Select>
+                            <SelectTrigger className="w-fit">
+                                <SelectValue placeholder="Coutntry Code" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                {countryCodes.map(country => {
+                                    return (
+                                        <SelectItem key={country.code} value={country.code}>
+                                            {country.name} (+{country.code})
+                                        </SelectItem>
+                                    );
+                                })}
+                                {/* <SelectItem value="system">System</SelectItem> */}
+                            </SelectContent>
+                        </Select>
+
+
+                        <Input className="w-full" type="tel" name="mobileNumber" id="mobileNumber" required />
+                    </div>
+                </div>
             </div>
 
             <div className="items-top flex space-x-2">
