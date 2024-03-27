@@ -16,7 +16,7 @@ export default function Header() {
         <Link className="h-8 w-fit flex-center" href="/">
           <Image
             className='h-full w-fit'
-            src="/images/logo/vintage vault.jpg"
+            src="/images/logo/vintage-vault.jpg"
             width={400}
             height={100}
             alt='LOGO'
