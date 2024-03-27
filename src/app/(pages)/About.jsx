@@ -11,7 +11,7 @@ export default function About() {
                     <ul className="list-disc list-inside flex-center flex-col">
                         <li className="self-start">Vintage Vault curates vintage jewellery into exclusive look books shared over WhatsApp.</li>
                         <li className="self-start">Each piece is unique, handpicked and often unavailable on the open market.</li>
-                        <li className="self-start">Curated by experts, our collection promises authenticity, a modern curation of vintage treasures and, for our clients, invitations to trunk shows in the World’s leading cities.</li>
+                        <li className="self-start">Curated by experts, our collection promises authenticity, a modern curation of vintage treasures and, for our clients, invitations to trunk shows in the World&apos;s leading cities.</li>
                     </ul>
                     <div className="w-full flex-center">
                         <Image

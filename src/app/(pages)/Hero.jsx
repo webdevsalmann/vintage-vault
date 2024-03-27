@@ -2,6 +2,9 @@ import Form from "@/components/shared/Form";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 
+export const metadata = {
+    description: 'Vintage Jewellery, Vintage Jewels, Rings, Engagement Rings, Jewelry, Vintage Jewelry, Antique Jewellery',
+}
 
 export default function Hero() {
     return (
@@ -9,10 +12,10 @@ export default function Hero() {
             {/* Heading */}
             <div className="md:flex-center flex-col">
                 <div className="self-start text-center md:text-left">
-                    <h1>Unveiling Vintage Vault</h1>
+                    <h1>Unlock the Secrets of Vintage Elegance</h1>
 
                     <p className="mt-2">
-                        Vintage Jewellery with a Contemporary Curation
+                        Join Our Exclusive Community for Curated Jewellery Delivered to Your Phone
                     </p>
                 </div>
             </div>

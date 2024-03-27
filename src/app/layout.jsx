@@ -8,8 +8,8 @@ const rubik = Barlow_Condensed({ subsets: ['latin'], weight: ["100", "200", "300
 // const rubik = Barlow_Condensed({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'webdevsalmann',
-  description: 'Website Developer Salman portfolio',
+  title: 'Vintage Vault – Vintage Jewellery',
+  description: 'A Vintage Jewellery Community for curated vintage jewellery and invitations to private jewellery sales and jewelry trunk shows.',
 }
 
 export default function RootLayout({ children }) {
