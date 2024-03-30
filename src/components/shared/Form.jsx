@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { useState } from "react";
-import { AtSign, CircleUser, Loader2, Smartphone } from "lucide-react";
+import { AtSign, CircleUser, Loader2, Mail, Phone, Smartphone } from "lucide-react";
 import { Checkbox } from "../ui/checkbox";
 import {
     Select,
@@ -69,9 +69,10 @@ export default function Form() {
     console.log(countryData)
 
     return (
-        <form className="p-4 w-full bg-grad-primary flex flex-col gap-4 bg-muted rounded-md border">
+        <form className="p-4 w-full flex flex-col gap-4 bg-muted rounded-md border">
 
             <div className="grid grid-cols-2 gap-4">
+                {/* First Name */}
                 <div className="w-full grid gap-1 col-span-2 md:col-span-1">
                     <Label className="text-lg flex gap-2" htmlFor="firstName">
                         <CircleUser className="size-4 self-center" /> First Name
@@ -79,6 +80,7 @@ export default function Form() {
                     <Input className="w-full" type="text" name="firstName" id="firstName" required />
                 </div>
 
+                {/* Last Name */}
                 <div className="w-full grid gap-1 col-span-2 md:col-span-1">
                     <Label className="text-lg flex gap-2" htmlFor="lastName">
                         <CircleUser className="size-4 self-center" /> Last Name
@@ -86,16 +88,17 @@ export default function Form() {
                     <Input className="w-full" type="text" name="lastName" id="lastName" required />
                 </div>
 
+                {/* Email */}
                 <div className="w-full grid gap-1 col-span-2">
                     <Label className="text-lg flex gap-2" htmlFor="email">
-                        <AtSign className="size-4 self-center" /> Email
+                        <Mail className="size-4 self-center" /> Email
                     </Label>
                     <Input className="w-full" type="email" name="email" id="email" required />
                 </div>
 
                 <div className="w-full grid gap-1 col-span-2">
                     <Label className="text-lg flex gap-2" htmlFor="mobileNumber">
-                        <Smartphone className="size-4 self-center" /> Mobile No.
+                        <Phone className="size-4 self-center" /> Mobile No.
                     </Label>
                     <div className="flex gap-2">
                         <Select>
@@ -136,7 +139,7 @@ export default function Form() {
             </div>
 
             {/* <Button className="w-fit mx-auto" variant="secondary" disabled={btnDisable}>{loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />} Send{loading && "ing"} </Button> */}
-            <Button className="w-full mx-auto capitalize">Join for Free</Button>
+            <Button className="w-full mx-auto capitalize">Join Now</Button>
         </form>
     )
 }
