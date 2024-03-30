@@ -66,7 +66,7 @@ export default function Form() {
     // }
 
     const countryCodes = getAllCountryCodes();
-    console.log(countryData)
+    // console.log(countryData)
 
     return (
         <form className="p-4 w-full flex flex-col gap-4 bg-muted rounded-md border">

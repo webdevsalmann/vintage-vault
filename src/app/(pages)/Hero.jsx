@@ -12,7 +12,7 @@ const rubik = Crimson_Text({ subsets: ['latin'], weight: ["400", "600", "700",],
 
 export default function Hero() {
     return (
-        <div className="grid gap-8 md:grid-cols-2 min-h-screen">
+        <div className="grid gap-8 md:grid-cols-2 min-h-screen bg-grad-primary">
             {/* Heading */}
             <div className="p-4 md:p-8 relative md:flex-center flex-col rounded-md overflow-hidden">
                 {/* Logo */}
@@ -49,41 +49,6 @@ export default function Hero() {
                     <h2 className="text-center">Join Our Community</h2>
                     <Form />
                 </div>
-                {/* <div className=" columns-2 ">
-                    <Image
-                        className='mt-4 ml-4 h-fit w-fit object-contain rounded-md'
-                        src="/images/common/1.png"
-                        width={500}
-                        height={500}
-                        alt='Jwellery Image'
-                    />
-                    <Image
-                        className='mt-4 ml-4 h-fit w-fit object-contain rounded-md'
-                        src="/images/common/4.png"
-                        width={500}
-                        height={500}
-                        alt='Jwellery Image'
-                    />
-                    <Image
-                        className='mt-4 ml-4 h-fit w-fit object-contain rounded-md'
-                        src="/images/common/3.png"
-                        width={500}
-                        height={500}
-                        alt='Jwellery Image'
-                    />
-                    <Image
-                        className='mt-4 ml-4 h-fit w-fit object-contain rounded-md'
-                        src="/images/common/2.png"
-                        width={500}
-                        height={500}
-                        alt='Jwellery Image'
-                    />
-                </div>
-                <div className="mt-4 text-center">
-                    Image Credit: <a className="capitalize hover:underline" href="https://omneque.com/" target="_blank">
-                        Sue Tilley, Courtesy of Omneque
-                    </a>
-                </div> */}
             </div>
         </div>
     )
